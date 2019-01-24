@@ -1,0 +1,3 @@
+/home/lujie/project/matting_Algorithm/release_matting/global_matting_release/test_algorithm/matting_version_2.0/build/CMakeFiles/sky_matting.dir
+/home/lujie/project/matting_Algorithm/release_matting/global_matting_release/test_algorithm/matting_version_2.0/build/CMakeFiles/edit_cache.dir
+/home/lujie/project/matting_Algorithm/release_matting/global_matting_release/test_algorithm/matting_version_2.0/build/CMakeFiles/rebuild_cache.dir

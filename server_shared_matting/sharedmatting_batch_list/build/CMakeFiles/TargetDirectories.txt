@@ -1,0 +1,3 @@
+/home/lujie/project/post-Processing/server_shared_matting/sharedmatting_batch_list/build/CMakeFiles/edit_cache.dir
+/home/lujie/project/post-Processing/server_shared_matting/sharedmatting_batch_list/build/CMakeFiles/rebuild_cache.dir
+/home/lujie/project/post-Processing/server_shared_matting/sharedmatting_batch_list/build/CMakeFiles/matting.dir

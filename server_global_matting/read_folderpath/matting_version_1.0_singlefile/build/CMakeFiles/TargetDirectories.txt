@@ -1,0 +1,3 @@
+/home/lujie/project/post-Processing/server_global_matting/read_folderpath/matting_version_1.0_singlefile/build/CMakeFiles/sky_matting.dir
+/home/lujie/project/post-Processing/server_global_matting/read_folderpath/matting_version_1.0_singlefile/build/CMakeFiles/edit_cache.dir
+/home/lujie/project/post-Processing/server_global_matting/read_folderpath/matting_version_1.0_singlefile/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,29 @@
+argv[0] <---- ./build/sky_matting
+
+argv[1] <---- rgb-img path                (eg:/media/disk1/lujie/zst_use/matting/img/)
+
+argv[2] <---- prob-img path               (eg:/media/disk1/lujie/zst_use/matting/mask/)
+
+argv[3] <---- matting_alpha image path    (eg:/media/disk1/lujie/zst_use/matting/test_alpha/)
+
+argv[4] <---- out_put data_info txt file  (eg: /media/disk1/lujie/zst_use/matting/test_datanote.txt)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/media/disk1/lujie/zst_use/34W_data/block_img/xad_blocks/block_15/4082717520-0003.jpg  /media/disk1/lujie/zst_use/matting/test_alpha/4082717520-0003.jpg
+/media/disk1/lujie/zst_use/34W_data/block_img/xad_blocks/block_16/4164219860-0003.jpg  /media/disk1/lujie/zst_use/matting/test_alpha/4164219860-0003.jpg
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note: make sure each path exists...
+
+sky matting
+提升重点：
+1. refine trimap：
+	若某点满足以下条件，则将原trimap对应的值改为128（unknown region）：
+    1. 该点某范围内有一定的255（fore region) （在前景附件）
+    2. 该点原图的灰度图对应的Laplacian导数值大于某阈值（处于某颜色均匀区域内）
+    3. 该点rgb值有 r <= g <= b （蓝色的rgb特点）
+    4. r、g、b值分别在某区域内（该区域由前景的颜色值决定）
+2. 解决黑块和黑条问题：
+	global matting之后会进行一个guided filter操作，其作用是优化mask的边缘，丰富细节。之前的参数设置有误。
+3. 性能优化：
+	改用Opencv自带的guided filter
+	现在的运行快慢直接受refine trimap的的影响，若该阶段找回的unknown region大则慢（40s左右），反之这快（1s左右）

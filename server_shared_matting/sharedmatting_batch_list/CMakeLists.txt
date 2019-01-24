@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(SharedMatting)
+set(CMAKE_CXX_FLAGS -std=c++11)
+find_package( OpenCV REQUIRED )
+message(STATUS, ${OpenCV_LIBS})
+add_executable( matting  main.cpp SharedMatting.cpp ) 
+target_link_libraries( matting ${OpenCV_LIBS} )
